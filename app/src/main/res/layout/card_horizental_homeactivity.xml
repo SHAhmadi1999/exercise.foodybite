@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/small"
+    android:layout_margin="@dimen/small"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+
+            android:id="@+id/img_card_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/card_img_home"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="@dimen/width_shapeHome_activity"
+            android:layout_height="@dimen/height_shapeHome_activity"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginTop="@dimen/small"
+            android:background="@drawable/shape_add"
+            android:backgroundTint="#fff"
+            android:text="@string/condition"
+            android:textColor="@color/color_condition"
+            app:layout_constraintStart_toStartOf="@id/img_card_home"
+            app:layout_constraintTop_toTopOf="@id/img_card_home" />
+
+        <Button
+            android:layout_width="@dimen/width_shapeHome_activity"
+            android:layout_height="@dimen/height_shapeHome_activity"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/small"
+            android:background="@drawable/shape_add"
+            android:backgroundTint="#fff"
+            android:drawableStart="@drawable/ic_star"
+            android:paddingStart="@dimen/xsmall"
+            android:text="@string/num_popular"
+            android:textColor="@color/color_numPopular"
+            app:layout_constraintEnd_toEndOf="@id/img_card_home"
+            app:layout_constraintTop_toTopOf="@id/img_card_home" />
+
+        <TextView
+            android:id="@+id/tv_nameRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginTop="@dimen/xsmall"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/text_nameRest"
+            android:textColor="@color/color_text_title"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_card_home" />
+
+        <TextView
+            android:id="@+id/tv_kindOfFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xsmall"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="#FF5673"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/xsmall"
+            android:paddingEnd="@dimen/xsmall"
+            android:text="@string/text_kind"
+            android:textColor="@color/color_textLogin"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintBottom_toBottomOf="@id/tv_nameRestaurant"
+            app:layout_constraintStart_toEndOf="@id/tv_nameRestaurant"
+            app:layout_constraintTop_toTopOf="@id/tv_nameRestaurant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xsmall"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="#848DFF"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/xxsmall"
+            android:paddingEnd="@dimen/xxsmall"
+            android:text="@string/num_followers"
+            android:textColor="@color/color_textLogin"
+            android:textSize="@dimen/text_xsmall"
+            app:layout_constraintBottom_toBottomOf="@id/tv_kindOfFood"
+            app:layout_constraintStart_toEndOf="@id/tv_kindOfFood"
+            app:layout_constraintTop_toTopOf="@id/tv_kindOfFood" />
+
+        <ImageView
+            android:layout_width="@dimen/width_imgGroup"
+            android:layout_height="@dimen/height_imgGroup"
+            android:layout_marginTop="@dimen/xsmall"
+            android:layout_marginEnd="@dimen/small"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_card_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxsmall"
+            android:text="@string/text_information"
+            android:textColor="@color/color_information"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_nameRestaurant"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameRestaurant"
+            android:layout_marginBottom="@dimen/average"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

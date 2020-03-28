@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_marginStart">@dimen/large</item>
+        <item name="android:layout_marginEnd">@dimen/large</item>
+        <item name="android:padding">@dimen/average</item>
+        <item name="android:textSize">@dimen/text_average</item>
+        <item name="android:textColor">@color/color_textLogin</item>
+    </style>
+    <style name="buttonHalfRadius_style">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:padding">@dimen/medium</item>
+        <item name="android:textSize">@dimen/text_average</item>
+        <item name="android:textColor">@color/color_textLogin</item>
+    </style>
+    <style name="style_ed_shapeBtn">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_marginStart">@dimen/large</item>
+        <item name="android:layout_marginEnd">@dimen/large</item>
+        <item name="android:padding">@dimen/average</item>
+        <item name="android:textSize">@dimen/text_average</item>
+        <item name="android:background">@drawable/shape_button</item>
+        <item name="android:backgroundTint">#40ffffff</item>
+        <item name="android:textColorHint">@color/color_textLogin</item>
+    </style>
+
+    <style name="style_Text_login">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/text_average</item>
+        <item name="android:textColor">@color/color_textLogin</item>
+    </style>
+
+    <style name="style_seeAll">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/color_TextBtnSearch</item>
+        <item name="android:textSize">@dimen/text_standard</item>
+        <item name="android:layout_marginEnd">@dimen/medium</item>
+
+    </style>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        android:padding="@dimen/xsmall"
+        app:title="@string/text_TrendingRestaurants"
+        app:titleTextColor="@color/color_numPopular"
+        app:titleMarginStart="@dimen/Xlarge"
+        />
+    <EditText
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        android:background="@drawable/shape_search"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableEnd="@drawable/ic_assignment_black_24dp"
+        android:drawablePadding="@dimen/xsmall"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/text_search"
+        android:padding="@dimen/small"
+        android:textColor="@color/color_TextBtnSearch"
+        android:textSize="@dimen/text_average"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/xsmall"
+        android:id="@+id/list_restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginEnd="@dimen/small"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
+       tools:listitem="@layout/card_horizental_homeactivity"
+        app:spanCount="1"
+        tools:itemCount="45"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

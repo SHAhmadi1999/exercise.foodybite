@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <EditText
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        android:background="@drawable/shape_search"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableEnd="@drawable/ic_assignment_black_24dp"
+        android:drawablePadding="@dimen/xsmall"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/text_btnSearch"
+        android:padding="@dimen/small"
+        android:textColor="@color/color_TextBtnSearch"
+        android:textSize="@dimen/text_average"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_restaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:fontFamily="@font/roboto_regular"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="@string/text_TrendingRestaurants"
+        android:textColor="@color/color_numPopular"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <TextView
+        style="@style/style_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="See all(45)"
+        app:layout_constraintBottom_toBottomOf="@id/tv_restaurants"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_restaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/small"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_restaurants"
+        tools:itemCount="45"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/card_horizental_homeactivity" />
+
+    <TextView
+        android:id="@+id/tv_kindOfFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:fontFamily="@font/roboto_light"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="@string/text_Category"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_restaurants" />
+
+    <TextView
+        style="@style/style_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all(9)"
+        app:layout_constraintBottom_toBottomOf="@id/tv_kindOfFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_restaurants"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_kindOfFood"
+        tools:itemCount="9"
+        tools:listitem="@layout/card_horizental_category" />
+
+    <TextView
+        android:id="@+id/tv_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:fontFamily="@font/roboto_light"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="@string/text_Friends"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_category"
+        />
+    <TextView
+        style="@style/style_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:text="See all(56)"
+        app:layout_constraintBottom_toBottomOf="@id/tv_friends"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_category"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_friends"
+        tools:itemCount="56"
+        tools:listitem="@layout/card_member_group" />
+
+    <include
+        layout="@layout/layout_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ImageButton
+    android:id="@+id/imgHomeDetails"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_imgHomeDetails"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"
+    app:layout_constraintTop_toTopOf="parent"
+    android:src="@drawable/img_home_details"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarDivider"
+        android:padding="@dimen/xsmall"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_left"
+        app:menu="@menu/toolbar_details_menu"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum=""
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeDetails"
+        android:layout_marginBottom="@dimen/small"
+        >
+
+        <Button
+            android:padding="@dimen/xsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_home_details_left"
+            android:backgroundTint="#90B8B5B5"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="@dimen/xsmall"
+            android:text="+05136666"
+            android:textSize="@dimen/text_standard"
+            android:textColor="@color/color_textLogin"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_home_details_right"
+            android:backgroundTint="#90B8B5B5"
+            android:textAllCaps="false"
+            android:drawablePadding="@dimen/xsmall"
+            android:padding="@dimen/xsmall"
+            android:text="@string/text_direction"
+            android:textSize="@dimen/text_standard"
+            android:drawableStart="@drawable/ic_directions"
+            android:textColor="@color/color_textLogin"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nameRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginTop="@dimen/xsmall"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="@string/text_nameRest"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeDetails" />
+
+    <TextView
+        android:id="@+id/tv_kindOfFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xsmall"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="#FF5673"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:paddingStart="@dimen/xsmall"
+        android:paddingEnd="@dimen/xsmall"
+        android:text="@string/text_kind"
+        android:textColor="@color/color_textLogin"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nameRestaurant"
+        app:layout_constraintStart_toEndOf="@id/tv_nameRestaurant"
+        app:layout_constraintTop_toTopOf="@id/tv_nameRestaurant" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xsmall"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="#848DFF"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:paddingStart="@dimen/xxsmall"
+        android:paddingEnd="@dimen/xxsmall"
+        android:text="@string/num_followers"
+        android:textColor="@color/color_textLogin"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="@id/tv_kindOfFood"
+        app:layout_constraintStart_toEndOf="@id/tv_kindOfFood"
+        app:layout_constraintTop_toTopOf="@id/tv_kindOfFood" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/xsmall"
+        android:layout_marginEnd="@dimen/small"
+        android:background="@drawable/shape_add"
+        android:backgroundTint="@color/color_backgroundRating"
+        android:drawableStart="@drawable/ic_star"
+        android:text="@string/num_popular"
+        android:textColor="@color/color_numPopular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeDetails" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small"
+        android:text="@string/text_information"
+        android:textColor="@color/color_information"
+        android:textSize="@dimen/text_standard"
+        app:layout_constraintStart_toStartOf="@id/tv_nameRestaurant"
+        app:layout_constraintTop_toBottomOf="@id/tv_nameRestaurant"
+/>
+    <LinearLayout
+        android:id="@+id/condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/text_small"
+        android:layout_marginTop="@dimen/xxsmall"
+
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_NowCondition"
+        android:textColor="@color/color_NowCondition"
+        android:textSize="@dimen/text_standard"
+
+      />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_dailyTime"
+            android:textColor="@color/color_information"
+            android:textSize="@dimen/text_standard"
+       />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_time"
+            android:textColor="@color/color_NowCondition"
+            android:textSize="@dimen/text_standard"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/text_small"
+        android:fontFamily="@font/roboto_light"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="@string/text_menu"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/condition" />
+
+    <TextView
+        style="@style/style_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all(32)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_menu"
+        app:layout_constraintBottom_toBottomOf="@id/tv_menu"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu"
+    tools:listitem="@layout/card_menu"
+        tools:itemCount="32"/>
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/text_small"
+        android:fontFamily="@font/roboto_light"
+        android:paddingTop="@dimen/xsmall"
+        android:paddingBottom="@dimen/xsmall"
+        android:text="@string/text_review"
+        android:textColor="@color/color_text_title"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_menu" />
+
+    <TextView
+        style="@style/style_seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all(32)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_review"
+        app:layout_constraintBottom_toBottomOf="@id/tv_review"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_review"
+        tools:listitem="@layout/card_review"
+        app:spanCount="1"
+        tools:itemCount="32"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_top_radius"
+            android:text="@string/text_rateExperience"
+            android:textAllCaps="false"
+            style="@style/buttonHalfRadius_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

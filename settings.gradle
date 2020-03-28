@@ -1,0 +1,2 @@
+rootProject.name='foodybite'
+include ':app'

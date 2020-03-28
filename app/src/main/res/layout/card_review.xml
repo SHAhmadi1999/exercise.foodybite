@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/small"
+    >
+    <ImageButton
+        android:id="@+id/img_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#0"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_memb_group"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+<TextView
+    android:id="@+id/tv_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/img_profile"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="@dimen/text_small"
+    android:text="@string/text_nameFollower"
+    android:textSize="@dimen/text_average"
+    android:textColor="@color/color_text_title"
+    android:fontFamily="@font/roboto_regular"/>
+    <TextView
+        android:id="@+id/introFollower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxsmall"
+        android:text="@string/text_introFollower"
+        android:textColor="@color/color_information"
+        android:textSize="@dimen/text_small"
+        android:layout_marginBottom="@dimen/small"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"/>
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="@dimen/small"
+        android:background="@drawable/shape_add"
+        android:backgroundTint="@color/color_backgroundRating"
+        android:drawableStart="@drawable/ic_star"
+        android:text="@string/num_popular"
+        android:textColor="@color/color_numPopular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

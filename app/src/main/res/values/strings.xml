@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">foodybite</string>
+    <string name="text_title_firstActivity">Foodybite</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_ForgotPassword">Forgot Password?</string>
+    <string name="text_login">Login</string>
+    <string name="text_newAccount">Create New Account</string>
+    <string name="text_introForgot">Enter your email and will send \n you instructions on how to reset it</string>
+    <string name="text_btnSearch">Find Restaurants</string>
+    <string name="text_TrendingRestaurants">Trending Restaurants</string>
+    <string name="text_seeAll">See all</string>
+    <string name="text_nameRest">Happy Bones</string>
+    <string name="text_kind">Italian</string>
+    <string name="num_popular">4.5</string>
+    <string name="condition">Open</string>
+    <string name="num_followers">1.2km</string>
+    <string name="text_information">394 Broome St, New York, NY 10013, USA</string>
+    <string name="text_Category">Category</string>
+    <string name="text_nameAccount">Name</string>
+    <string name="text_ConfirmPassword">Confirm Password</string>
+    <string name="text_Friends">Friends</string>
+    <string name="text_Register">Register</string>
+    <string name="text_skip">Skip</string>
+    <string name="QExist_account">Already have an account?</string>
+    <string name="text_welcome">Hi John,\nWelcome to </string>
+    <string name="text_GPS">Turn On GPS</string>
+    <string name="text_suggestion">Please turn on your GPS to find \nout better restaurant suggestions\n near you. </string>
+    <string name="text_search">Search</string>
+    <string name="text_filter">Filter</string>
+    <string name="text_distance">Distance</string>
+    <string name="text_rating">Rating</string>
+    <string name="text_reset">Reset</string>
+    <string name="text_apply">Apply</string>
+    <string name="text_direction">Direction</string>
+    <string name="text_NowCondition">Open Now</string>
+    <string name="text_select_category">Select Category</string>
+    <string name="text_dailyTime"> daily time </string>
+    <string name="text_time">9:30 am to 11:00 pm</string>
+    <string name="text_menu">Menu and Photos</string>
+    <string name="text_review">Review and Ratings</string>
+    <string name="text_nameFollower">Collin Fields</string>
+    <string name="text_introFollower">Lorem ipsum dolor sit a met consectetur </string>
+    <string name="text_rateExperience">Rate Your Experience </string>
+
+</resources>
